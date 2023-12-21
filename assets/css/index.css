@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #794afa;
+  --secondary-dark-color: #453c5c;
+
+  --white-color: #ffffff;
+  --light-bg-color: #f2f3f5;
+  --light-text-color: #7c899a;
+  --border-color: #e5e8ec;
+  --dark-color: #0a021c;
+
+  --font-sm: 13px;
+  --font-smaller: 11px;
+
+  --percent-100: 100%;
+  --percent-50: 50%;
+
+  --fw3: 300;
+  --fw5: 500;
+  --fw6: 600;
+  --fw7: 700;
+  --fw8: 800;
+
+  --trans-background-color: background-color 0.3s, color 0.3s;
+  --trans-background: background-color 0.3s;
+  --trans-color: color 0.3s;
+}
+
+/* ##########################
+ ***** GLOBAL STYLES *******
+ ##########################  */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+a {
+  text-align: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: var(--percent-100);
+  vertical-align: middle;
+}
+strong {
+  font-weight: var(--fw8);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input::placeholder {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 'Poppins';
+}
+h1 {
+  font-size: calc(1.3em + 1vw);
+  font-weight: var(--fw8);
+  line-height: 1;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
+}
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
+}
+
+/* ##########################
+ ***** REUSABLE STYLES *******
+ ##########################  */
+
+.container {
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 0 0.938em;
+}
+.column {
+  margin-left: -0.9938em;
+  margin-right: -0.9938em;
+}
+.column .row {
+  padding: 0.9938em;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-item {
+  display: flex;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* ##########################
+ ***** HEADER STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** SLIDER STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** BRANDS STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** PRODUCTS STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** BANNER STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** MENU *******
+ ##########################  */
+
+/* ##########################
+ ***** OVERLAY *******
+ ##########################  */
+
+/* ##########################
+ ***** PAGES STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** CART STYLES *******
+ ##########################  */
+
+/* ##########################
+ ***** MOBILE VIEW STYLES *******
+ ##########################  */
+
+@media screen and(min-width: 992px) {
+  .container {
+    padding: 0.2em;
+  }
+}
