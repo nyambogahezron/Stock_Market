@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik:wght@300;400;500;600&display=swap');
 :root {
   --primary-color: #ff6b6b;
   --secondary-color: #794afa;
@@ -221,7 +222,12 @@ header li > a {
 /* ##########################
  ***** HEADER STYLES *******
  ##########################  */
-
+:where(.off-canvas, header) li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+  transition: var(--trans-color);
+}
 /* top header  */
 .header-top .wrapper {
   font-size: var(--font-md);
@@ -244,10 +250,10 @@ header li > a {
   z-index: 1;
   display: none;
 }
-.header-top .right ul ul li a {
+:where(.header-top, .the-top-nav) .right ul ul li a {
   padding: 0.25em 1em;
 }
-.header-top .right ul ul li.current a {
+:where(.header-top, .the-top-nav) .right ul ul li.current a {
   background-color: var(--border-color);
 }
 .header-top li:hover ul {
@@ -373,7 +379,11 @@ nav .fly-item {
   font-size: var(--font-md);
   height: 46px;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
 }
+
 .dpt-menu .has-child:hover ul {
   display: block;
 }
@@ -422,6 +432,127 @@ form.search button:hover {
   background-color: var(--dark-color);
 }
 
+/* ##########################
+ ***** Responsive nav *******
+ ##########################  */
+.site-off {
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  background-color: var(--white-color);
+  overflow-y: auto;
+  z-index: 1000;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.4s, visibility 0.4s;
+  will-change: transform, visibility;
+}
+.showMenu .site-off {
+  transform: translateX(0);
+  visibility: visible;
+  transform: transform 0.4s 0s, visibility 0s 0s;
+}
+.off-canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: auto;
+  padding: 1.5em;
+}
+.off-canvas .canvas-head {
+  color: var(--white-color);
+  justify-content: space-between;
+  padding: 1.5em;
+  margin: -1.5em -1.5em 1.5em;
+  background-color: var(--secondary-dark-color);
+  border-bottom-right-radius: 160px 25px;
+}
+.off-canvas .canvas-head .logo {
+  z-index: 10;
+  position: relative;
+}
+.off-canvas .canvas-head .logo .circle {
+  opacity: 0.75;
+}
+.t-close {
+  font-size: 1.25em;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--secondary-dark-color);
+  color: var(--white-color);
+  transition: var(--trans-background-color);
+}
+.t-close:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-dark-color);
+  opacity: 0.75;
+}
+.off-canvas .dpt-head {
+  font-size: var(--font-md);
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: var(--light-bg-color);
+  border-radius: tpx 7px 0 0;
+}
+.off-canvas .has-child > :where(ul, .mega) {
+  font-size: var(--font-md);
+  font-weight: var(--fw3);
+  line-height: 28px;
+  padding-left: 3em;
+
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.off-canvas .expand :where(ul, .mega) {
+  max-height: 2000px;
+}
+.off-canvas .the-top-nav ul,
+.off-canvas nav > ul {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-md);
+  line-height: 36px;
+  padding-top: 1.25em;
+  margin: 1.25em 0;
+  border-top: 1px solid var(--border-color);
+}
+.off-canvas nav .mega {
+  padding: 0;
+}
+.off-canvas nav .mega .products {
+  display: none;
+}
+.off-canvas .has-child .icon-small {
+  padding: 0.5em;
+  line-height: initial;
+}
+.off-canvas .dpt-menu .icon-small i {
+  transform: rotate(90deg);
+}
+.off-canvas .has-child {
+  width: 100%;
+}
+.off-canvas
+  .the-top-nav
+  .right
+  > ul
+  > :where(:nth-child(4), li:nth-child(5))
+  > a {
+  display: none;
+}
+.off-canvas .the-top-nav .right ul ul {
+  display: flex;
+  flex-direction: row;
+}
+.off-canvas .the-top-nav .right ul ul li a {
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  line-height: 16px;
+  margin: 0 0.5em 0.5em 0;
+}
 /* ##########################
  ***** SLIDER STYLES *******
  ##########################  */
