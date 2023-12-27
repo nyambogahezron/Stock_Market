@@ -607,7 +607,18 @@ form.search button:hover {
 /* ##########################
  ***** BRANDS STYLES *******
  ##########################  */
-
+.brands .wrapper {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+.brands .item img {
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+.brands .item a:hover img {
+  opacity: 1;
+}
 /* ##########################
  ***** PRODUCTS STYLES *******
  ##########################  */
@@ -773,7 +784,7 @@ form.search button:hover {
   .dpt-menu .fashion ul {
     background-image: url(../images/menu/menu_bg3.jpg);
   }
-  .dpt-menu .homekit .mega {
+  .dpt-menu .home-kit .mega {
     background-image: url(../images/menu/menu_bg4.jpg);
   }
   .dpt-menu .has-child > :where(ul, .mega)::before {
