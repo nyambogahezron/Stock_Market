@@ -792,6 +792,11 @@ form.search button:hover {
   width: 21%;
   background-color: var(--secondary-color);
 }
+.products .item {
+  display: flex;
+  position: relative;
+}
+
 /* #### Products ####
 #### Big Products */
 
@@ -802,6 +807,27 @@ form.search button:hover {
   border-radius: 7px;
   max-width: 460px;
   margin: 0 auto;
+}
+/* #### Products ####
+#### Mini Products */
+
+.products.mini .item {
+  margin-bottom: 2em;
+}
+.products.mini .media {
+  width: 130px;
+  height: 160px;
+  margin-right: 1.25em;
+}
+.products.mini .content {
+  margin: 0;
+  gap: 0.75em;
+}
+.products.mini .content h3 {
+  text-overflow: ellipsis;
+}
+.products:where(.mini, .main) h3 {
+  font-weight: 400;
 }
 /* ##########################
  ***** BANNER STYLES *******
