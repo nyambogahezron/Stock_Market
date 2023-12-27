@@ -42,3 +42,11 @@ menuButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
   addClass.classList.remove('showMenu');
 });
+
+//slider
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});

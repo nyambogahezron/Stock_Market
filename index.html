@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Market</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="remix.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div id="page" class="site">
@@ -18,7 +23,9 @@
             <div class="logo">
               <a href="/"><span class="circle"></span>.Stock</a>
             </div>
-            <a href="#" class="t-close flex-center"><i class="ri-close-line"></i></a>
+            <a href="#" class="t-close flex-center"
+              ><i class="ri-close-line"></i
+            ></a>
           </div>
           <div class="departments"></div>
           <nav></nav>
@@ -47,8 +54,7 @@
                       >USD
                       <span class="icon-small"
                         ><i class="ri-arrow-down-s-line"></i></span
-                      ></a
-                    >
+                    ></a>
                     <ul>
                       <li class="current"><a href="#">USD</a></li>
                       <li><a href="#">EURO</a></li>
@@ -62,8 +68,7 @@
                       >English
                       <span class="icon-small"
                         ><i class="ri-arrow-down-s-line"></i></span
-                      ></a
-                    >
+                    ></a>
                     <ul>
                       <li class="current"><a href="#">English</a></li>
                       <li><a href="#">German</a></li>
@@ -82,8 +87,8 @@
           <div class="container">
             <div class="wrapper flex-item">
               <a href="#" class="trigger desktop-hide"
-                ><span><i class="ri-menu-2-line"></i></span></a
-              >
+                ><span><i class="ri-menu-2-line"></i></span
+              ></a>
               <div class="left flex-item">
                 <div class="logo">
                   <a href="/"><span class="circle"></span>.Stock</a>
@@ -331,7 +336,7 @@
                     <li class="">
                       <a href="#">
                         <div class="icon-large">
-                        <i class="ri-user-heart-fill"></i>
+                          <i class="ri-user-heart-fill"></i>
                         </div>
                         Boy's Fashion
                       </a>
@@ -350,8 +355,7 @@
                           <i class="ri-restaurant-line"></i>
                         </div>
                         Home And Kitchen
-                        <div class="icon-small">
-                        </div>
+                        <div class="icon-small"></div>
                       </a>
                       <div class="mega">
                         <div class="flex-col">
@@ -411,7 +415,7 @@
                     <li class="">
                       <a href="#">
                         <div class="icon-large">
-                         <i class="ri-mickey-line"></i>
+                          <i class="ri-mickey-line"></i>
                         </div>
                         Pet Supplies
                       </a>
@@ -455,12 +459,105 @@
       </div>
       <!-- header end  -->
       <!-- main start  -->
-      <main></main>
+      <main>
+        <div class="slider">
+          <div class="container">
+            <div class="wrapper">
+              <div class="myslider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image object-cover">
+                        <img
+                          src="./assets/images/slider/slider0.jpg"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-content flex-col">
+                        <h4>Shoe Fashion</h4>
+                        <h2>
+                          <span>Come and Get It!</span><br /><span
+                            >Brand New Shoes</span
+                          >
+                        </h2>
+                        <a href="#" class="primary-button">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image object-cover">
+                        <img
+                          src="./assets/images/slider/slider1.jpg"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-content flex-col">
+                        <h4>Quick Fashion</h4>
+                        <h2>
+                          <span>Fit Your Wardrobe</span><br /><span
+                            >With Luxury Items</span
+                          >
+                        </h2>
+                        <a href="#" class="primary-button">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image object-cover">
+                        <img
+                          src="./assets/images/slider/slider2.jpg"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-content flex-col">
+                        <h4>Quick Offer</h4>
+                        <h2>
+                          <span>Wooden Minimal Sofa</span><br /><span
+                            >extra 50% off</span
+                          >
+                        </h2>
+                        <a href="#" class="primary-button">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image object-cover">
+                        <img
+                          src="./assets/images/slider/slider3.jpg"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-content flex-col">
+                        <h4>Best Deals</h4>
+                        <h2>
+                          <span>Home Workout Accessories</span><br /><span
+                            >Push the limit</span
+                          >
+                        </h2>
+                        <a href="#" class="primary-button">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       <!-- main end  -->
       <!-- footer start  -->
       <footer></footer>
       <!-- footer end  -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
