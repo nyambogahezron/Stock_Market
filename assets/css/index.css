@@ -936,6 +936,76 @@ form.search button:hover {
   text-decoration: underline;
 }
 /* ##########################
+ ***** Footer *******
+ ##########################  */
+
+/* #### Footer ####
+#### Footer new letter */
+
+.newsletter {
+  padding: 2.5em 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.newsletter h3 {
+  font-size: 1.5em;
+}
+.newsletter p {
+  font-weight: var(--fw3);
+  color: var(--border-color);
+  margin: 0.5em 0 1.5em;
+}
+.newsletter p strong {
+  color: var(--primary-color);
+}
+.newsletter form {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* #### Footer ####
+#### Widgets */
+
+.widgets {
+  padding: 3.5em 2.5em;
+  background-color: var(--light-bg-color);
+}
+
+/* #### Footer ####
+#### Footer Info */
+
+.footer-info {
+  padding: 3.5em 0 5em;
+}
+.footer-info .wrapper .flex-col {
+  align-items: center;
+  gap: 0;
+}
+.footer-info ul li a {
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--light-bg-color);
+  border-radius: 50%;
+  margin: 0.25em;
+  color: var(--secondary-color);
+  transition: var(--trans-background);
+}
+.footer-info ul li a:hover {
+  background-color: var(--border-color);
+}
+.footer-info .logo a {
+  margin: 0 0 1em -0.75em;
+}
+.footer-info .mini-text {
+  margin-top: 2em;
+  text-align: center;
+}
+
+/* ##########################
  ***** MENU *******
  ##########################  */
 
@@ -964,7 +1034,8 @@ form.search button:hover {
     font-size: 1.25em;
   }
   .products.mini,
-  .banner .row {
+  .banner .row,
+  .widgets .row {
     flex: 0 0 50%;
   }
   .products.main .item {
@@ -1146,7 +1217,16 @@ form.search button:hover {
   .products .big .media {
     max-height: 373px;
   }
-  .products.main .item {
+  .products.main .item,
+  .widgets .row {
     flex: 0 0 25%;
+  }
+
+  /* Footer  */
+
+  .newsletter .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
