@@ -599,7 +599,7 @@ form.search button:hover {
 
 .text-content :where(h2, h3) span:first-child {
   font-weight: var(--fw3);
-  columns: var(--light-text-color);
+  color: var(--light-text-color);
 }
 .text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
@@ -801,7 +801,7 @@ form.search button:hover {
   display: flex;
   position: relative;
 }
-.products .stock-denger {
+.products .stock-danger {
   color: var(--primary-color);
 }
 .flex-wrap .row {
@@ -886,7 +886,37 @@ form.search button:hover {
 /* ##########################
  ***** BANNER STYLES *******
  ##########################  */
-
+.banner .item {
+  position: relative;
+  background-color: var(--white-color);
+  border: 1px solid var(--border-color);
+}
+.banner .image {
+  text-align: right;
+}
+.banner .get-gray {
+  background-color: var(--border-color);
+}
+.banner :where(.text-content, .over-link) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner .text-content {
+  padding: 1.5em 2.5em;
+}
+.banner h3 {
+  font-size: calc(1em + 0.5vw);
+  font-weight: var(--fw3);
+}
+.banner h3 span {
+  font-size: 80%;
+}
+.banner .primary-button {
+  z-index: 3;
+}
 /* ##########################
  ***** MENU *******
  ##########################  */
@@ -915,7 +945,8 @@ form.search button:hover {
   .products .price .current {
     font-size: 1.25em;
   }
-  .products.mini {
+  .products.mini,
+  .banner .row {
     flex: 0 0 50%;
   }
   .products.main .item {
