@@ -50,3 +50,16 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
   },
 });
+
+//show search on mobile
+
+const searchBtn = document.querySelector('.t-search'),
+  tClose = document.querySelector('.search-close'),
+  showClass = document.querySelector('.site');
+
+searchBtn.addEventListener('click', () => {
+  showClass.classList.toggle('show-search');
+});
+tClose.addEventListener('click', () => {
+  showClass.classList.remove('show-search');
+});
