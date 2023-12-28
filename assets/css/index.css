@@ -917,6 +917,24 @@ form.search button:hover {
 .banner .primary-button {
   z-index: 3;
 }
+.banners .product-categories .item {
+  display: flex;
+  padding: 1.5em;
+}
+.banners .product-categories .image {
+  max-width: 150px;
+}
+.mini-links ul {
+  font-size: var(--font-md);
+  color: var(--light-text-color);
+  margin-top: 1em;
+}
+.banners .second-links {
+  margin-top: 2em;
+}
+.mini-links li a:hover {
+  text-decoration: underline;
+}
 /* ##########################
  ***** MENU *******
  ##########################  */
@@ -1121,7 +1139,8 @@ form.search button:hover {
 
   /* products  */
 
-  .treading .products {
+  .treading .products,
+  .product-categories .row {
     flex: 0 0 33.3333%;
   }
   .products .big .media {
