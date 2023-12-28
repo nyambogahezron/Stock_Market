@@ -50,6 +50,8 @@ body {
   line-height: 1.4;
   color: var(--dark-color);
   background-color: var(--white-color);
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 a {
   text-decoration: none;
@@ -789,14 +791,21 @@ form.search button:hover {
 }
 .products .stock .available {
   height: 3px;
-  width: 21%;
+  width: 31%;
   background-color: var(--secondary-color);
 }
 .products .item {
   display: flex;
   position: relative;
 }
-
+.products .stock-denger{
+  color: var(--primary-color);
+}
+.flex-wrap .row{
+  flex: 0 0 100%;
+  width: 100%;
+  margin-bottom: 2em;
+}
 /* #### Products ####
 #### Big Products */
 
@@ -813,19 +822,18 @@ form.search button:hover {
 
 .products.mini .item {
   margin-bottom: 2em;
+  padding-left: 5px;
 }
 .products.mini .media {
   width: 130px;
-  height: 160px;
+  height: 185px;
   margin-right: 1.25em;
 }
 .products.mini .content {
   margin: 0;
   gap: 0.75em;
 }
-.products.mini .content h3 {
-  text-overflow: ellipsis;
-}
+
 .products:where(.mini, .main) h3 {
   font-weight: 400;
 }
@@ -856,6 +864,9 @@ form.search button:hover {
 @media screen and (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
+  }
+  .products.mini{
+    flex: 0 0 50%;
   }
 }
 @media screen and (min-width: 992px) {
