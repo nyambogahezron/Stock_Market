@@ -742,7 +742,7 @@ form.search button:hover {
   display: flex;
   flex-direction: column;
 }
-.products:where(.big, .main.one) .content {
+.products:where(.big, .main, .one) .content {
   gap: 1em;
   margin-top: 1.25em;
 }
@@ -757,6 +757,9 @@ form.search button:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z' fill='rgba(240,187,64,1)'%3E%3C/path%3E%3C/svg%3E");
   background-position-y: top;
   background-repeat-y: no-repeat;
+}
+.products .item:where(:nth-child(3), :nth-child(3)) .stars {
+  width: 64px;
 }
 .products h3 {
   font-family: 'Rubik';
@@ -798,10 +801,10 @@ form.search button:hover {
   display: flex;
   position: relative;
 }
-.products .stock-denger{
+.products .stock-denger {
   color: var(--primary-color);
 }
-.flex-wrap .row{
+.flex-wrap .row {
   flex: 0 0 100%;
   width: 100%;
   margin-bottom: 2em;
@@ -837,6 +840,49 @@ form.search button:hover {
 .products:where(.mini, .main) h3 {
   font-weight: 400;
 }
+
+/* #### Products ####
+#### Main -featured Products */
+.products.main .item {
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 0 1.5em;
+  padding-bottom: 2em;
+}
+.products.main .media {
+  height: 390px;
+}
+.products.main .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 1em 1em;
+  border-radius: 7px;
+  background: linear-gradient(
+    0deg,
+    var(--light-bg-color) 0%,
+    var(--white-color) 70%
+  );
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity;
+  transition: all 0.2s ease-in-out;
+}
+.products.main .item:hover .footer {
+  opacity: 1;
+  visibility: visible;
+}
+.products.main .footer ul {
+  list-style: disc;
+  padding: 1.25em 0 0 1.25em;
+  line-height: 1.8;
+  border-top: 1px solid var(--border-color);
+  margin-top: 145px;
+}
+.products.main .item:hover .content > *:not(.footer) {
+  z-index: 3;
+}
 /* ##########################
  ***** BANNER STYLES *******
  ##########################  */
@@ -860,13 +906,20 @@ form.search button:hover {
 /* ##########################
  ***** MOBILE VIEW STYLES *******
  ##########################  */
-
+@media screen and (min-width: 481px) {
+  .products.main .item {
+    flex: 0 0 50%;
+  }
+}
 @media screen and (min-width: 768px) {
   .products .price .current {
     font-size: 1.25em;
   }
-  .products.mini{
+  .products.mini {
     flex: 0 0 50%;
+  }
+  .products.main .item {
+    flex: 0 0 33.3333%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1042,5 +1095,8 @@ form.search button:hover {
   }
   .products .big .media {
     max-height: 373px;
+  }
+  .products.main .item {
+    flex: 0 0 25%;
   }
 }
