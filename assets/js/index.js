@@ -63,3 +63,37 @@ searchBtn.addEventListener('click', () => {
 tClose.addEventListener('click', () => {
   showClass.classList.remove('show-search');
 });
+
+//show dpt menu
+
+const dptBtn = document.querySelector('.dpt-cat .dpt-trigger'),
+  dptClass = document.querySelector('.site');
+dptBtn.addEventListener('click', () => {
+  dptClass.classList.toggle('show-dpt');
+});
+
+// products image slider
+
+var productThumb = new Swiper('.small-image', {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    481: {
+      spaceBetween: 32,
+    },
+  },
+});
+var productBig = new Swiper('.big-image', {
+  loop: true,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: productThumb,
+  },
+});
