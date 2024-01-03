@@ -1420,6 +1420,57 @@ form.search button:hover {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* #### PAGE SINGLE ####
+#### Products Review form*/
+
+.review-form .rating {
+  flex-wrap: wrap;
+}
+.review-form p {
+  font-size: 1.25em;
+  margin-right: 1em;
+}
+.review-form .rate-this input {
+  display: none;
+}
+.review-form .rate-this label {
+  float: right;
+  font-size: 2em;
+  color: var(--secondary-dark-color);
+}
+.rate-this > input:checked ~ label,
+.rate-this:not(:checked) > label:hover,
+.rate-this:not(:checked) > label:hover ~ label {
+  color: #f1c40e;
+}
+.rate-this > input:checked + label:hover,
+.rate-this > input:checked ~ label:hover,
+.rate-this > label:hover ~ label:hover ~ label,
+.rate-this > input:hover ~ label:hover ~ label {
+  color: #ffed85;
+}
+.review-form form {
+  margin-top: 2em;
+}
+form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.7em;
+}
+form :where(input, textarea) {
+  line-height: 1;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  outline: 0;
+}
+form label {
+  font-weight: var(--fw6);
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.page-single .container {
+  padding: 0.6em;
+}
 /* ##########################
  ***** CART STYLES *******
  ##########################  */
@@ -1668,5 +1719,8 @@ form.search button:hover {
   }
   #page.show-dpt .dpt-menu {
     display: block;
+  }
+  .page-single .container {
+    padding: 0.2em;
   }
 }
