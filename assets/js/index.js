@@ -109,3 +109,24 @@ for (let x = 0; x < stocks.length; x++) {
     stock - sold;
   stocks[x].querySelector('.available').style.width = percent + '%';
 }
+
+// show filter menu
+const FtoShow = '.filter';
+
+const F_popup = document.querySelector(FtoShow);
+const F_trigger = document.querySelector('.filter-trigger');
+
+F_trigger.addEventListener('click', () => {
+  setTimeout(() => {
+    if (!F_popup.classList.contains('show')) {
+      F_popup.classList.add('show');
+    }
+  }, 250);
+});
+
+document.addEventListener('click', (e) => {
+  const isClosest = e.target.closest(FtoShow);
+  if (!isClosest && F_popup.classList.contains('show')) {
+    F_popup.classList.remove('show');
+  }
+});
