@@ -130,3 +130,24 @@ document.addEventListener('click', (e) => {
     F_popup.classList.remove('show');
   }
 });
+
+// show mini cart
+const div_toShow = '.mini-cart';
+const div_popup = document.querySelector(div_toShow);
+const div_trigger = document.querySelector('.cart-trigger');
+
+div_trigger.addEventListener('click', () => {
+  setTimeout(() => {
+    if (!div_popup.classList.contains('show')) {
+      div_popup.classList.add('show');
+    }
+  }, 250);
+});
+
+//close cart
+document.addEventListener('click', (e) => {
+  const isClosest = e.target.closest(div_toShow);
+  if (!isClosest && div_popup.classList.contains('show')) {
+    div_popup.classList.remove('show');
+  }
+});
