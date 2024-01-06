@@ -151,3 +151,11 @@ document.addEventListener('click', (e) => {
     div_popup.classList.remove('show');
   }
 });
+
+//show modal on load
+window.onload = function() {
+  document.querySelector('.site.page-checkout').classList.toggle('show-modal');
+};
+document.querySelector('.modal-close').addEventListener('click', () => {
+  document.querySelector('.site').classList.remove('show-modal');
+});
