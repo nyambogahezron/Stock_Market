@@ -29,7 +29,6 @@ needs of our global clientele
 
 ## `Tech`
 
-Dillinger uses a number of open source projects to work properly:
 
 - HTML
 - CSS
